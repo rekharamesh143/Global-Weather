@@ -1,47 +1,30 @@
-# SkyCast — Global Weather Forecast
-
-A responsive React + Vite weather app. Search cities around the world and view current conditions plus a 7-day forecast.
+# SkyCast — Global Weather Forecast (fixed)
+This version fixes the blank-page error `ReferenceError: Can't find variable: React` by importing React in JSX modules and enabling the Vite React plugin with the automatic JSX runtime.
 
 ## Features
-- Worldwide city search using Open-Meteo Geocoding API
-- Current temperature, feels-like temperature, humidity, wind and precipitation
-- 7-day min/max temperature, weather conditions and precipitation probability
+- Search cities worldwide
+- Current conditions, temperature, feels-like, humidity, wind and precipitation
+- 7-day min/max forecast, rain probability and wind
 - Sunrise and sunset
-- Celsius / Fahrenheit toggle
-- Recent city shortcuts
-- Responsive desktop and mobile layout
+- Celsius/Fahrenheit toggle and recent searches
+- Responsive layout
 
 ## Run locally
-1. Install Node.js (LTS).
-2. Extract this ZIP and open the project folder in a terminal.
-3. Run:
-
-   ```bash
-   npm install
-   npm run dev
-   ```
-
-4. Open the local URL shown by Vite (usually http://localhost:5173).
+```bash
+npm install
+npm run dev
+```
+Open the local URL printed by Vite.
 
 ## Build
 ```bash
 npm run build
-npm run preview
 ```
 
-## Deploy to Vercel
-1. Push this folder to a GitHub repository.
-2. In Vercel, choose **Add New → Project** and import the repository.
-3. Vercel should detect Vite automatically.
-4. Build command: `npm run build`
-5. Output directory: `dist`
-6. Click **Deploy**.
+## Deploy updated version
+1. Replace the files in your existing GitHub repository with the contents of this ZIP (keep the folder structure).
+2. Commit and push to the same branch connected to Vercel, usually `main`.
+3. Vercel will automatically create a new deployment.
+4. Wait for Ready, then open Visit and hard-refresh the page.
 
-No API key or environment variables are required for the included Open-Meteo endpoints.
-
-## Weather data
-This app uses:
-- Open-Meteo Geocoding API: https://geocoding-api.open-meteo.com/
-- Open-Meteo Forecast API: https://api.open-meteo.com/
-
-Weather data attribution: Open-Meteo (https://open-meteo.com/). Review its current usage terms before commercial deployment. The free hosted API is intended for non-commercial use; commercial usage may require a suitable plan.
+No API key is required for the Open-Meteo endpoints used here. Check Open-Meteo's current terms before commercial use.
